@@ -38,7 +38,7 @@
       function addExamples(prefixDir, examples, containerEl) {
         examples.filter(example => example.type === 'dir').forEach(example => {
           const li = document.createElement('li')
-          li.appendChild(Object.assign(document.createElement('a'), {href: `${prefixDir}/${example.name}/`, textContent: example.name}))
+          li.appendChild(Object.assign(document.createElement('a'), {href: `${prefixDir}/${example.name}/index.html`, textContent: example.name}))
           containerEl.appendChild(li)
         })
       }
