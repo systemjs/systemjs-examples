@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>SystemJS examples</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/systemjs-examples/">
+</head>
+<body>
+  <h1>SystemJS Examples</h1>
+  <p>
+    This website is a live demo of a variety of SystemJS applications and use cases.
+  </p>
+  <section>
+    <h2>system.js examples</h2>
+    <ul id="systemjs-examples"></ul>
+  </section>
+  <section>
+    <h2>s.js examples</h2>
+    <ul id="sjs-examples"></ul>
+  </section>
+  <script>
+    (async () => {
+      const [systemjsExamplesResponse, sjsExamplesResponse] = await Promise.all([
+        fetch('https://api.github.com/repos/systemjs/systemjs/contents/dist'),
+        fetch('https://api.github.com/repos/systemjs/systemjs/contents/src')
+      ]);
+
+      const [systemjsExamples, sjsExamples] = await Promise.all([
+        systemjsExamplesResponse.json(),
+        sjsExamplesResponse.json()
+      ]);
+
+      addExamples('systemjs', systemjsExamples, document.getElementById('systemjs-examples'));
+      addExamples('sjs', sjsExamples, document.getElementById('sjs-examples'));
+
+      function addExamples(prefixDir, examples, containerEl) {
+        examples.filter(example => example.type === 'dir').forEach(example => {
+          const li = document.createElement('li')
+          li.appendChild(Object.assign(document.createElement('a'), {href: `${prefixDir}/${example.name}`, textContent: example.name}))
+          containerEl.appendChild(li)
+        })
+      }
+    })()
+  </script>
+</body>
+</html>
