@@ -23,8 +23,8 @@
   <script>
     (async () => {
       const [systemjsExamplesResponse, sjsExamplesResponse] = await Promise.all([
-        fetch('https://api.github.com/repos/systemjs/systemjs/contents/dist'),
-        fetch('https://api.github.com/repos/systemjs/systemjs/contents/src')
+        fetch('https://api.github.com/repos/systemjs/systemjs-examples/contents/systemjs'),
+        fetch('https://api.github.com/repos/systemjs/systemjs-examples/contents/sjs')
       ]);
 
       const [systemjsExamples, sjsExamples] = await Promise.all([
