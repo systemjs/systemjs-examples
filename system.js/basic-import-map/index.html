@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Basic SystemJS Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "mercury": "./mercury.js",
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa/lib/system/single-spa.min.js"
+      }
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/system.js"></script>
+  <script>
+    // Load a module with a relative url
+    System.import('mercury').then(function (mercuryModule) {
+      console.log('mercuryModule', mercuryModule);
+      mercuryModule.doAlert();
+    });
+
+    // Load a module from a CDN
+    System.import('single-spa').then(function (singleSpa) {
+      console.log('singleSpa module', singleSpa)
+      singleSpa.start();
+    });
+  </script>
+</head>
+<body>
+</body>
+</html>
