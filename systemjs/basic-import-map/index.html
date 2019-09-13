@@ -13,20 +13,12 @@
       }
     }
   </script>
+  <!-- load a locally hosted module -->
+  <script type="systemjs-module" src="import:mercury"></script>
+  <!-- load a module from CDN -->
+  <script type="systemjs-module" src="import:single-spa"></script>
+  <!-- load SystemJS itself from CDN -->
   <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/system.js"></script>
-  <script>
-    // Load a module with a relative url
-    System.import('mercury').then(function (mercuryModule) {
-      console.log('mercuryModule', mercuryModule);
-      mercuryModule.doAlert();
-    });
-
-    // Load a module from a CDN
-    System.import('single-spa').then(function (singleSpa) {
-      console.log('singleSpa module', singleSpa)
-      singleSpa.start();
-    });
-  </script>
 </head>
 <body>
 </body>
