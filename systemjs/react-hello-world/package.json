@@ -1,0 +1,15 @@
+{
+  "name": "react-hello-world",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
+    "rollup": "^1.21.2",
+    "rollup-plugin-babel": "^4.3.3"
+  },
+  "dependencies": {}
+}
