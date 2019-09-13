@@ -5,7 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>SystemJS examples</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <base href="/systemjs-examples/">
+  <script>
+    if (window.location.origin.includes('github.io')) {
+      document.write('<base href="/systemjs-examples/">');
+    }
+  </script>
 </head>
 <body>
   <h1>SystemJS Examples</h1>
@@ -38,7 +42,7 @@
       function addExamples(prefixDir, examples, containerEl) {
         examples.filter(example => example.type === 'dir').forEach(example => {
           const li = document.createElement('li')
-          li.appendChild(Object.assign(document.createElement('a'), {href: `${prefixDir}/${example.name}/index.html`, textContent: example.name}))
+          li.appendChild(Object.assign(document.createElement('a'), {href: `${prefixDir}/${example.name}/`, textContent: example.name}))
           containerEl.appendChild(li)
         })
       }
