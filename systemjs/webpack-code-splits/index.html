@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>SystemJS Example - Webpack Code Splits</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      font-family: monospace;
+    }
+  </style>
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "mars": "./dist/bundle.js"
+      }
+    }
+  </script>
+  <script type="systemjs-module" src="import:mars"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/system.js"></script>
+</head>
+<body>
+</body>
+</html>
