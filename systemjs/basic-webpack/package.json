@@ -1,0 +1,15 @@
+{
+  "name": "basic-webpack",
+  "scripts": {
+    "build": "webpack"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8"
+  },
+  "dependencies": {
+    "systemjs-webpack-interop": "^1.0.0"
+  }
+}
