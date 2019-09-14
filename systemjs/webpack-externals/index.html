@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Webpack Code Splits - SystemJS Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "vue": "https://cdn.jsdelivr.net/npm/vue",
+        "jupiter": "./dist/bundle.js"
+      }
+    }
+  </script>
+  <script type="systemjs-module" src="import:jupiter"></script>
+  <script src="/systemjs/webpack-externals/node_modules/systemjs/dist/system.js"></script>
+  <script src="/systemjs/webpack-externals/node_modules/systemjs/dist/extras/amd.js"></script>
+  <script src="/systemjs/webpack-externals/node_modules/systemjs/dist/extras/use-default.js"></script>
+</head>
+<body>
+  <div id="vue-container"></div>
+</body>
+</html>
