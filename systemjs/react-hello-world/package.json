@@ -2,7 +2,7 @@
   "name": "react-hello-world",
   "version": "1.0.0",
   "scripts": {
-    "build": "babel react-hello-world.js --out-file dist/react-hello-world.js --source-maps"
+    "build": "babel src --out-dir dist --source-maps"
   },
   "license": "MIT",
   "devDependencies": {

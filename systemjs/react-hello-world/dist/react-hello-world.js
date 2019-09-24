@@ -13,5 +13,4 @@ System.register(["react", "react-dom"], function (_export, _context) {
     }
   };
 });
-
 //# sourceMappingURL=react-hello-world.js.map
