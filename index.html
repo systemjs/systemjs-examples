@@ -16,35 +16,25 @@
   <p>
     This website is a live demo of a variety of SystemJS applications and use cases.
   </p>
-  <section>
-    <h2>system.js examples</h2>
-    <ul id="systemjs-examples"></ul>
-  </section>
-  <section>
-    <h2>s.js examples</h2>
-    <ul id="sjs-examples"></ul>
-  </section>
   <script>
     (async () => {
-      const [systemjsExamplesResponse, sjsExamplesResponse] = await Promise.all([
-        fetch('https://api.github.com/repos/systemjs/systemjs-examples/contents/systemjs'),
-        fetch('https://api.github.com/repos/systemjs/systemjs-examples/contents/sjs')
-      ]);
+      const directories = await(await fetch('https://api.github.com/repos/systemjs/systemjs-examples/contents')).json()
 
-      const [systemjsExamples, sjsExamples] = await Promise.all([
-        systemjsExamplesResponse.json(),
-        sjsExamplesResponse.json()
-      ]);
+      directories.filter(dir => dir.type === 'dir').forEach(async function(dir) {
+        const exampleDirs = await(await fetch(`https://api.github.com/repos/systemjs/systemjs-examples/contents/${dir.name}`)).json()
+        addExamples(dir.name, exampleDirs)
+      })
 
-      addExamples('systemjs', systemjsExamples, document.getElementById('systemjs-examples'));
-      addExamples('sjs', sjsExamples, document.getElementById('sjs-examples'));
-
-      function addExamples(prefixDir, examples, containerEl) {
+      function addExamples(prefixDir, examples) {
+        const containerEl = document.createElement('section')
+        const header = Object.assign(document.createElement('h2'), {textContent: prefixDir})
+        containerEl.appendChild(header)
         examples.filter(example => example.type === 'dir').forEach(example => {
           const li = document.createElement('li')
           li.appendChild(Object.assign(document.createElement('a'), {href: `${prefixDir}/${example.name}/`, textContent: example.name}))
           containerEl.appendChild(li)
         })
+        document.body.appendChild(containerEl)
       }
     })()
   </script>
