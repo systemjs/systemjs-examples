@@ -1,0 +1,15 @@
+{
+  "name": "react-hello-world",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "babel src --out-dir dist --source-maps"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.2",
+    "@babel/plugin-transform-modules-systemjs": "^7.5.0",
+    "@babel/preset-react": "^7.0.0"
+  },
+  "dependencies": {}
+}
