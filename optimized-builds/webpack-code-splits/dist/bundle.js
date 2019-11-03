@@ -341,6 +341,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var systemjs_webpack_interop__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! systemjs-webpack-interop */ "./node_modules/systemjs-webpack-interop/src/systemjs-webpack-interop.js");
 
 
+// equivalent to __webpack_public_path__ = System.resolve('mars').slice(0, System.resolve('mars').lastIndexOf('/') + 1)
 Object(systemjs_webpack_interop__WEBPACK_IMPORTED_MODULE_0__["setPublicPath"])('mars')
 
 /***/ })
