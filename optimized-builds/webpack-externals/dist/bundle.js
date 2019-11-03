@@ -109,16 +109,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 
 
-console.log('Vue', vue__WEBPACK_IMPORTED_MODULE_0___default.a)
+console.log('Vue', vue__WEBPACK_IMPORTED_MODULE_0___default.a);
 
 const App = vue__WEBPACK_IMPORTED_MODULE_0___default.a.default.extend({
   template: '<p>Jupiter has {{numMoons}} moons',
   data: () => ({
     numMoons: 79,
   })
-})
+});
 
-new App().$mount('#vue-container')
+new App().$mount('#vue-container');
 
 /***/ }),
 
