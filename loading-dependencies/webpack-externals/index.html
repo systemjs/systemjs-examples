@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Webpack Externals - SystemJS Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/loading-dependencies/webpack-externals/">
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "vue": "https://cdn.jsdelivr.net/npm/vue",
+        "jupiter": "./dist/bundle.js"
+      }
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/system.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/amd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/use-default.js"></script>
+</head>
+<body>
+  <div id="vue-container"></div>
+  <script>
+    System.import('jupiter')
+  </script>
+</body>
+</html>
