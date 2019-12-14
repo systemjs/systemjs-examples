@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "babel src --out-dir lib --source-maps --plugins=@babel/plugin-transform-modules-amd"
+    "build": "babel src --out-dir lib --plugins=@babel/plugin-transform-modules-amd"
   },
   "author": "",
   "license": "ISC",

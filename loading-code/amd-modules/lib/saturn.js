@@ -12,4 +12,3 @@ define(["./neptune.js"], function (neptune) {
   }));
   neptune.showDistanceFromSun();
 });
-//# sourceMappingURL=saturn.js.map
