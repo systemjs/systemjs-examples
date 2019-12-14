@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "sourceMap": true,
+    "target": "es2015",
+    "module": "system",
+    "lib": ["es2015", "dom"]
+  }
+}

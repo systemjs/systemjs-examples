@@ -1,0 +1,9 @@
+{
+  "name": "typescript-example",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^3.6.4"
+  }
+}
