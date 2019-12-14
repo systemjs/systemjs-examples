@@ -1,0 +1,15 @@
+{
+  "name": "webpack-code-splits",
+  "scripts": {
+    "build": "webpack"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "systemjs-webpack-interop": "^1.1.0"
+  }
+}
