@@ -4,7 +4,7 @@ Examples demonstrating various use cases with SystemJS.
 
 ## Live demo
 
-[Live demo](https://systemjs.github.io/systemjs-examples/).
+[Live demo](https://systemjs.github.io/systemjs-examples/)
 
 ## Running locally
 
