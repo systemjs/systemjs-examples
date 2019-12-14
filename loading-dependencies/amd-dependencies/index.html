@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AMD Dependencies - SystemJS Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "titan": "./lib/titan.js",
+        "rxjs": "https://cdn.jsdelivr.net/npm/rxjs/bundles/rxjs.umd.min.js"
+      }
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/system.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/amd.js"></script>
+  <!-- The named-exports extra is important to avoid having to rxjs.default.of() (and similar for all other rxjs functions) -->
+  <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/named-exports.js"></script>
+</head>
+<body>
+  <div id="react-container"></div>
+  <script>
+    System.import('titan')
+  </script>
+</body>
+</html>
