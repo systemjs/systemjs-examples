@@ -1,4 +1,4 @@
-import { InterstellarObjects, NotRealPlanets, RealPlanets } from '../planets.js'
+import { InterstellarObjects, NotRealPlanets, RealPlanets } from '../planets'
 
 export function isPlanet(planetName: InterstellarObjects) {
   if (RealPlanets[planetName]) {
