@@ -1,13 +1,13 @@
-System.register(["../planets.js"], function (exports_1, context_1) {
+System.register(["../planets"], function (exports_1, context_1) {
     "use strict";
-    var planets_js_1;
+    var planets_1;
     var __moduleName = context_1 && context_1.id;
     function isPlanet(planetName) {
-        if (planets_js_1.RealPlanets[planetName]) {
+        if (planets_1.RealPlanets[planetName]) {
             console.log(`${planetName} is a planet!`);
             return true;
         }
-        else if (planets_js_1.NotRealPlanets[planetName]) {
+        else if (planets_1.NotRealPlanets[planetName]) {
             console.log(`${planetName} is not a planet!`);
             return false;
         }
@@ -18,8 +18,8 @@ System.register(["../planets.js"], function (exports_1, context_1) {
     exports_1("isPlanet", isPlanet);
     return {
         setters: [
-            function (planets_js_1_1) {
-                planets_js_1 = planets_js_1_1;
+            function (planets_1_1) {
+                planets_1 = planets_1_1;
             }
         ],
         execute: function () {

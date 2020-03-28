@@ -30,7 +30,7 @@ System.register(["lodash", "./helpers/planet-helpers", "./planets"], function (e
             planet_helpers_1.isPlanet(planets_1.NotRealPlanets.Pluto);
             // Just a demonstration that lodash is available, since the systemjs-importmap in index.html
             // specifies where to fetch lodash
-            console.log('Real Planers');
+            console.log('Real Planets');
             lodash_1.default.each(planets_1.RealPlanets, planet => console.log(planet));
         }
     };
