@@ -21,5 +21,5 @@ isPlanet(NotRealPlanets.Pluto)
 
 // Just a demonstration that lodash is available, since the systemjs-importmap in index.html
 // specifies where to fetch lodash
-console.log('Real Planers')
+console.log('Real Planets')
 _.each(RealPlanets, planet => console.log(planet))
