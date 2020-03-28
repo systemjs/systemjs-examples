@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Basic Typescript SystemJS Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "lodash": "https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"
+      }
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/system.js"></script>
+  <script src="./dist/systemjs-hooks/resolve.js"></script>
+  <script>System.import("./dist/typescript-example")</script>
+</head>
+
+<body>
+</body>
+
+</html>

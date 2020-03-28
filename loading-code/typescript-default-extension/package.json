@@ -1,0 +1,11 @@
+{
+  "name": "typescript-default-extension-example",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.149",
+    "@types/systemjs": "^6.1.0",
+    "typescript": "^3.8.3"
+  }
+}
