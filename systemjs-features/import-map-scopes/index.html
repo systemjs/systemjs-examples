@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Import Map Scopes SystemJS Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "main": "./main/main.js",
+        "dep": "./dep-v1.js"
+      },
+      "scopes": {
+        "./main/": {
+          "dep": "./dep-v2.js"
+        }
+      }
+    }
+  </script>
+  <!-- load SystemJS itself from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/system.js"></script>
+  <script>
+    System.import('main').then(main => {
+      console.log('main module was loaded', main);
+    });
+
+    System.import('dep').then(dep => {
+      console.log('dep, loaded as top level module', dep);
+    });
+
+    // prepareImport simply waits for all import maps to be processed
+    // You must do so before calling System.resolve()
+    System.prepareImport().then(function () {
+      System.import('dep', System.resolve('main')).then(dep => {
+        console.log('dep, loaded relative to main module', dep);
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>Check browser console for details</h1>
+</body>
+</html>
