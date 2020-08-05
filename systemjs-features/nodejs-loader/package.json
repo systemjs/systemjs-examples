@@ -1,0 +1,14 @@
+{
+  "name": "nodejs-loader",
+  "version": "1.0.0",
+  "description": "This example shows SystemJS running in the browser.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "systemjs": "latest"
+  }
+}
